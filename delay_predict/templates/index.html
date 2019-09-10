@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<title>Delay Predict App</title>
+<style>
+#wrapper {
+   text-align: left;
+}
+</style>
+   <body>
+      <div id="wrapper">
+         {% for message in form.Time.errors %}
+            <div>{{ message }}</div>
+         {% endfor %}
+
+         {% for message in form.Traffic.errors %}
+            <div>{{ message }}</div>
+         {% endfor %}
+
+         {% for message in form.Passenger.errors %}
+            <div>{{ message }}</div>
+         {% endfor %}
+
+         {% for message in form.Rainy.errors %}
+            <div>{{ message }}</div>
+         {% endfor %}
+
+         <form method="post">
+            {{ form.Time.label }}<br>
+            {{ form.Time }}
+            <br>
+            {{ form.Traffic.label }}<br>
+            {{ form.Traffic }}
+            <br>
+            {{ form.Passenger.label }}<br>
+            {{ form.Passenger }}
+            <br>
+            {{ form.Rainy.label }}<br>
+            {{ form.Rainy }}
+            <br>
+            {{ form.submit }}
+         </form>
+      </div>
+   </body>
+</html>
