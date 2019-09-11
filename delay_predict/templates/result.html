@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<html>
 <title>Delay Predict App</title>
-  <h1>予測される遅延は {{ pred }} 分です</h1>
-  <a href="./">トップへ戻る</a>
+<style>
+#wrapper {
+   text-align: center;
+}
+</style>
+   <body>
+      <div id="wrapper">
+          <h1>予測される遅延は {{ pred }} 分です</h1>
+          <a href="./update/">学習モデルを更新する</a>
+          <a href="./">トップへ戻る</a>
+      </div>
+   </body>
+</html>

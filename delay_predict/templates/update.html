@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<title>Delay Predict App</title>
+<style>
+#wrapper {
+   text-align: center;
+}
+</style>
+   <body>
+      <div id="wrapper">
+         {% for message in form.Label.errors %}
+            <div>{{ message }}</div>
+         {% endfor %}
+         <form method="post">
+            {{ form.Label.label }}<br>
+            {{ form.Label }}
+            <br>
+            {{ form.submit }}
+         </form>
+      <br>
+      <a href="..">トップへ戻る</a>
+      </div>
+   </body>
+</html>
