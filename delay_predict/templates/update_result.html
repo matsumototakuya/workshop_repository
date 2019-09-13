@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- パンくずリストの設定-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="..">TOP</a>
+                </li>
+                <li class="breadcrumb-item active">更新</li>
+            </ol>
+            <!--ページタイトル-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h2><b>学習モデルの更新</b></h2></div>
+                <div class="card-body">
+                    <div class="container-fluid">
+                        <div class="alert alert-info" role="alert"><h3>学習モデルを更新しました！<br>現在の予測精度は{{ score }}％です</h3>
+                        </div>
+                        <a class="btn btn-primary" href="..">TOPへ戻る</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

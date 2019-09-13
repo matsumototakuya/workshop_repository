@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- パンくずリストの設定-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="..">TOP</a>
+                </li>
+                <li class="breadcrumb-item active">初期化</li>
+            </ol>
+            <!--ページタイトル-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h2><b>学習モデルの初期化</b></h2></div>
+                <div class="card-body">
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3>学習モデルを初期化しますか？</h3>
+                                <button class="btn btn-danger">初期化する</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </body>
+{% endblock content %}
