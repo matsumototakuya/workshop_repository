@@ -107,5 +107,12 @@ def inits():
     elif request.method == 'GET':
         return render_template('init.html')
 
+@app.route('/list/')
+def list():
+    data = np.load(file ="data.npy")
+    target = np.load(file ="target.npy")
+    x = zip(data,target)
+    return render_template('list.html', data=x)
+
 if __name__ == "__main__":
     app.run()

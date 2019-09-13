@@ -17,5 +17,23 @@
 {% endblock %}
 <!-- bootstrapのjavascrit読み込み-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+ <!-- Databableの定義-->
+ <script>
+    jQuery(function($){
+      // デフォルトの設定を変更
+      $.extend( $.fn.dataTable.defaults, {
+          language: {
+              url: "http://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Japanese.json"
+              }
+              });
+      $("#list").DataTable({
+          "searching": true,     //検索機能
+          "paging":   true,      //ページング機能
+          "ordering": true,      //ソート機能
+          "lengthChange": true,  //件数切り替え機能
+
+          }).columns.adjust().draw();
+          });
+ </script>
 </body>
 </html>
