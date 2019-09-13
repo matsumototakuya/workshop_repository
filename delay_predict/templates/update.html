@@ -1,24 +1,36 @@
-<!DOCTYPE html>
-<html>
-<title>Delay Predict App</title>
-<style>
-#wrapper {
-   text-align: center;
-}
-</style>
-   <body>
-      <div id="wrapper">
-         {% for message in form.Label.errors %}
-            <div>{{ message }}</div>
-         {% endfor %}
-         <form method="post">
-            {{ form.Label.label }}<br>
-            {{ form.Label }}
-            <br>
-            {{ form.submit }}
-         </form>
-      <br>
-      <a href="..">トップへ戻る</a>
-      </div>
-   </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- パンくずリストの設定-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="..">TOP</a>
+                </li>
+                <li class="breadcrumb-item active">更新</li>
+            </ol>
+            <!--ページタイトル-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h2><b>学習モデルの更新</b></h2></div>
+                <div class="card-body">
+                    {% for message in form.Label.errors %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    {{ form.Label.label }}<br>
+                                    {{ form.Label }}
+                                    <br><br>
+                                    {{ form.submit }}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

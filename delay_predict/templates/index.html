@@ -1,44 +1,60 @@
-<!DOCTYPE html>
-<html>
-<title>Delay Predict App</title>
-<style>
-#wrapper {
-   text-align: center;
-}
-</style>
-   <body>
-      <div id="wrapper">
-         {% for message in form.Time.errors %}
-            <div>{{ message }}</div>
-         {% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <!-- パンくずリストの設定-->
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="./">TOP</a>
+                </li>
+            </ol>
+            <!--ページタイトル-->
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h2><b>遅延予測アプリ</b></h2></div>
+                <div class="card-body">
+                    {% for message in form.Time.errors %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
 
-         {% for message in form.Traffic.errors %}
-            <div>{{ message }}</div>
-         {% endfor %}
+                    {% for message in form.Traffic.errors %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
 
-         {% for message in form.Passenger.errors %}
-            <div>{{ message }}</div>
-         {% endfor %}
+                    {% for message in form.Passenger.errors %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
 
-         {% for message in form.Rainy.errors %}
-            <div>{{ message }}</div>
-         {% endfor %}
+                    {% for message in form.Rainy.errors %}
+                        <div>{{ message }}</div>
+                    {% endfor %}
 
-         <form method="post">
-            {{ form.Time.label }}<br>
-            {{ form.Time }}
-            <br>
-            {{ form.Traffic.label }}<br>
-            {{ form.Traffic }}
-            <br>
-            {{ form.Passenger.label }}<br>
-            {{ form.Passenger }}
-            <br>
-            {{ form.Rainy.label }}<br>
-            {{ form.Rainy }}
-            <br>
-            {{ form.submit }}
-         </form>
-      </div>
-   </body>
-</html>
+                    <form method="post">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card-body">
+                                    {{ form.Time.label }}<br>
+                                    {{ form.Time }}
+                                    <br>
+                                    {{ form.Traffic.label }}<br>
+                                    {{ form.Traffic }}
+                                    <br>
+                                    {{ form.Passenger.label }}<br>
+                                    {{ form.Passenger }}
+                                    <br>
+                                    {{ form.Rainy.label }}<br>
+                                    {{ form.Rainy }}
+                                    <br><br>
+                                    {{ form.submit }}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                    <a class="btn btn-danger" href="./init/">学習モデルを初期化する</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

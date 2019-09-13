@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.externals import joblib
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor as RFR
+import init_data
 
 # 学習済みモデルを読み込み利用します
 def predict(parameters):
@@ -60,7 +61,6 @@ class LabelForm(Form):
                           validators.NumberRange(min=0, max=10)])
     submit = SubmitField("更新")
 
-
 @app.route('/', methods=['GET', 'POST'])
 def predicts():
     form = DelayForm(request.form)
@@ -95,10 +95,17 @@ def updates():
             Parameters = np.load(file ="parameters.npy")
             score = update(Parameters, Label)
 
-            return render_template('finish.html', score=round(score, 3))
+            return render_template('update_result.html', score=round(score, 3)*100)
     elif request.method == 'GET':
         return render_template('update.html', form=form)
 
+@app.route('/init/', methods = ['GET', 'POST'])
+def inits():
+    if request.method == 'POST':
+        init_data.init_data()
+        return render_template('init_result.html')
+    elif request.method == 'GET':
+        return render_template('init.html')
 
 if __name__ == "__main__":
     app.run()
