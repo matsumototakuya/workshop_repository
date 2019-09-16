@@ -11,12 +11,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1QhEM4g3y7bSPVRcGt0RDFJngLt" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -81,7 +82,12 @@
       <workItem from="1568214382284" duration="3649000" />
       <workItem from="1568341207660" duration="4885000" />
       <workItem from="1568379560517" duration="7328000" />
-      <workItem from="1568389657970" duration="4319000" />
+      <workItem from="1568389657970" duration="6911000" />
+      <workItem from="1568466315035" duration="530000" />
+      <workItem from="1568466883024" duration="1643000" />
+      <workItem from="1568481958954" duration="190000" />
+      <workItem from="1568482962037" duration="2000" />
+      <workItem from="1568482970472" duration="920000" />
     </task>
     <servers />
   </component>
